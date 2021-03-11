@@ -51,21 +51,40 @@ const TeamDetails = () => {
           alt=""
         />
       </div>
-      <div style={{backgroundColor:"#240e31"}}>
+      <div style={{ backgroundColor: "#240e31" }}>
         <div className="container ">
-            <br/>
-            <br/>
-            <br/>
+          <br />
+          <br />
+          <br />
           <div>
-            <div className="row d-flex justify-content-center" style={{ borderRadius: "25px" ,backgroundColor:"#034250"}}>
+            <div
+              className="row d-flex justify-content-center"
+              style={{ borderRadius: "25px", backgroundColor: "#034250" }}
+            >
               <div className="col-md-7 ">
-                <h5 className="team--information-details-section mt-3"><strong>{strTeam}</strong></h5>
-                <br/>
+                <h5 className="team--information-details-section mt-3">
+                  <strong>{strTeam}</strong>
+                </h5>
+                <br />
                 <div>
-                <p className="team--information-details-section"><FontAwesomeIcon icon={faMapMarkerAlt} />    <strong>Founded: </strong>{intFormedYear}</p>
-                <p className="team--information-details-section"><FontAwesomeIcon icon={faFlag} />    <strong>Country: </strong>{strCountry}</p>
-                <p className="team--information-details-section"><FontAwesomeIcon icon={faFutbol} />     <strong>Sport Type: </strong>{strSport}</p>
-                <p className="team--information-details-section"><FontAwesomeIcon icon={faMars} />   <strong>Gender: </strong>{strGender}</p>
+                  <p className="team--information-details-section">
+                    <FontAwesomeIcon icon={faMapMarkerAlt} />{" "}
+                    <strong>Founded: </strong>
+                    {intFormedYear}
+                  </p>
+                  <p className="team--information-details-section">
+                    <FontAwesomeIcon icon={faFlag} /> <strong>Country: </strong>
+                    {strCountry}
+                  </p>
+                  <p className="team--information-details-section">
+                    <FontAwesomeIcon icon={faFutbol} />{" "}
+                    <strong>Sport Type: </strong>
+                    {strSport}
+                  </p>
+                  <p className="team--information-details-section">
+                    <FontAwesomeIcon icon={faMars} /> <strong>Gender: </strong>
+                    {strGender}
+                  </p>
                 </div>
               </div>
               <div className="col-md-5 d-flex justify-content-center">
@@ -85,10 +104,10 @@ const TeamDetails = () => {
               </div>
             </div>
           </div>
-          <br/>
-          <br/>
-          <br/>
-          <p style={{color:"white"}}>
+          <br />
+          <br />
+          <br />
+          <p style={{ color: "white" }}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam,
             porro quis! Cum odit maiores voluptate deserunt praesentium alias
             similique cumque? Non, doloribus quo quod provident ad possimus
@@ -96,8 +115,8 @@ const TeamDetails = () => {
             doloremque deserunt laborum commodi quibusdam dicta, molestias
             provident eos iusto. Neque rem eligendi quis distinctio impedit!
           </p>
-          <br/>
-          <p style={{color:"white"}}>{strDescriptionEN}</p>
+          <br />
+          <p style={{ color: "white" }}>{strDescriptionEN}</p>
         </div>
         <div className="d-flex justify-content-center mt-5">
           <a

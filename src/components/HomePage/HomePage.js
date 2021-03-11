@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Teams from "../SingleTeam/SingleTeam";
 import "./HomePage.css";
 
-
 const HomePage = () => {
   const [allTeams, setAllTeams] = useState([]);
 
@@ -16,16 +15,18 @@ const HomePage = () => {
   return (
     <div>
       <div className=" banner">
-        <h1 className="text-center bannerTitle"><span style={{color:"#240e31"}}>English Premier League</span></h1>
+        <h1 className="text-center bannerTitle">
+          <span style={{ color: "#240e31" }}>English Premier League</span>
+        </h1>
       </div>
-      <div style={{backgroundColor:'#240e31'}}>
-      <div className="container">
-        <div className="row">
-          {allTeams.map((team) => (
-            <Teams team={team}></Teams>
-          ))}
+      <div style={{ backgroundColor: "#240e31" }}>
+        <div className="container">
+          <div className="row">
+            {allTeams.map((team) => (
+              <Teams team={team}></Teams>
+            ))}
+          </div>
         </div>
-      </div>
       </div>
     </div>
   );
