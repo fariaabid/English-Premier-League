@@ -26,6 +26,7 @@ const TeamDetails = () => {
     strTwitter,
     strInstagram,
     strYoutube,
+    strStadiumThumb
   } = teamDetails;
   useEffect(() => {
     fetch(
@@ -43,7 +44,7 @@ const TeamDetails = () => {
           alt=""
         />
       </div>
-      <div className="bg-danger">
+      <div className="a">
         <div className="container">
           <br />
           <br />
@@ -82,17 +83,17 @@ const TeamDetails = () => {
           </div>
           <br />
           <br />
-          <div className="w-75">
-            <a href={`https://${strFacebook}`}>
+          <div className="d-flex justify-content-center">
+            <a target="_" href={`https://${strFacebook}`} className="social-icon facebook">
               <FontAwesomeIcon icon={faFacebook} className="facebook" />
             </a>
-            <a href={`https://${strTwitter}`}>
+            <a target="_" href={`https://${strTwitter}`} className="social-icon twitter">
               <FontAwesomeIcon icon={faTwitter} />
             </a>
-            <a href={`https://${strInstagram}`}>
+            <a target="_" href={`https://${strInstagram}`} className="social-icon instagram">
               <FontAwesomeIcon icon={faInstagram} />
             </a>
-            <a href={`https://${strYoutube}`}>
+            <a target="_" href={`https://${strYoutube}`} className="social-icon youtube">
               <FontAwesomeIcon icon={faYoutube} />
             </a>
           </div>

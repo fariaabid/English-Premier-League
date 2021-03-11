@@ -2,16 +2,26 @@
     background-image: url("../../logo.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100% 400px;
-    height: 400px;
+    background-size: 100% 500px;
+    height: 500px;
     -webkit-filter: opacity(0.75);
     filter: opacity(0.75);
 }
 .team-details-banner-section img{
      padding-top: 100px;
     width: 300px;
-    height: 300px;
+    height: 400px;
 }
-/* .firstRow{
-    background-color: aqua;
-} */
+.social-icon{
+    font-size: 50px;
+    margin: 0 10px;
+}
+.facebook{
+    color: rgb(0, 0 ,98)
+}
+.youtube{
+    color: red;
+}
+.instagram{
+    color: #000;
+}
