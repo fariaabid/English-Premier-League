@@ -2,9 +2,10 @@ import React from "react";
 import { Button, Card } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight} from '@fortawesome/free-solid-svg-icons'
+import {Link} from "react-router-dom";
 
-const Teams = (props) => {
-  const { strTeamBadge, strTeam, strSport } = props.team;
+const SingleTeam = (props) => {
+  const { strTeamBadge, strTeam, strSport,idTeam} = props.team;
   return (
         <div className="col-md-4 text-center">
       <Card style={{ width: "300px",height:'370px',backgroundColor:'white'}} className="my-5">
@@ -12,11 +13,11 @@ const Teams = (props) => {
         <Card.Body>
           <Card.Title >{strTeam}</Card.Title>
           <Card.Text>{strSport}</Card.Text>
-          <Button variant="primary"> Explore   <FontAwesomeIcon icon={faArrowRight} /> </Button>
+          <Button as={Link} to={`/team/${idTeam}`} variant="primary"> Explore   <FontAwesomeIcon icon={faArrowRight} /> </Button>
         </Card.Body>
       </Card>
     </div>
   );
 };
 
-export default Teams;
+export default SingleTeam;

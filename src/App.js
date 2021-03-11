@@ -1,14 +1,25 @@
-import './App.css';
-import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
-import Header from './components/Header/Header';
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-
-
-
+import HomePage from "./components/HomePage/HomePage";
+import TeamDetails from "./components/TeamDetails/TeamDetails";
 
 function App() {
   return (
-    <Header></Header>
+    <Router>
+      <Switch>
+        <Route path="/home">
+          <HomePage></HomePage>
+        </Route>
+        <Route exact path="/">
+          <HomePage></HomePage>
+        </Route>
+       <Route path="/team/:idTeam">
+         <TeamDetails></TeamDetails>
+       </Route>
+
+      </Switch>
+    </Router>
   );
 }
 

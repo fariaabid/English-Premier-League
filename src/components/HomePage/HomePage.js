@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Teams from "../Teams/Teams";
-import "../Header/Header.css";
+import Teams from "../SingleTeam/SingleTeam";
+import "./HomePage.css";
 
 
-const Header = () => {
+const HomePage = () => {
   const [allTeams, setAllTeams] = useState([]);
 
   useEffect(() => {
@@ -31,4 +31,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HomePage;
