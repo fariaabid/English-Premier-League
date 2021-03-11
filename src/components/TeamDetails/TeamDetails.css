@@ -4,13 +4,17 @@
     background-position: center;
     background-size: 100% 500px;
     height: 500px;
-    -webkit-filter: opacity(0.75);
-    filter: opacity(0.75);
+    /* -webkit-filter: opacity(0.7);
+    filter: opacity(0.7); */
 }
 .team-details-banner-section img{
      padding-top: 100px;
     width: 300px;
     height: 400px;
+    
+}
+.team--information-details-section{
+    color: white;
 }
 .social-icon{
     font-size: 50px;

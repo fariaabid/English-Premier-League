@@ -10,6 +10,14 @@ import {
   faInstagram,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import {
+  faFlag,
+  faFutbol,
+  faMapMarkerAlt,
+  faMars,
+} from "@fortawesome/free-solid-svg-icons";
+import male from "../../male.png";
+import female from "../../female.png";
 
 const TeamDetails = () => {
   const { idTeam } = useParams();
@@ -26,7 +34,6 @@ const TeamDetails = () => {
     strTwitter,
     strInstagram,
     strYoutube,
-    strStadiumThumb,
   } = teamDetails;
   useEffect(() => {
     fetch(
@@ -44,75 +51,83 @@ const TeamDetails = () => {
           alt=""
         />
       </div>
-      <div className="a">
-        <div className="container">
-          <br />
-          <br />
-          <br />
-          <div className="hello bg-primary">
-            <div className="row">
-              <div className="col-md-6">
-                <h5>{strTeam}</h5>
-                <h5>Founded:{intFormedYear}</h5>
-                <h5>Country:{strCountry}</h5>
-                <h5>Sports Type:{strSport}</h5>
-                <h5>Gender:{strGender}</h5>
+      <div style={{backgroundColor:"#700387"}}>
+        <div className="container ">
+            <br/>
+            <br/>
+            <br/>
+          <div>
+            <div className="row d-flex justify-content-center" style={{ borderRadius: "25px" ,backgroundColor:"#140480"}}>
+              <div className="col-md-7 ">
+                <h5 className="team--information-details-section mt-3"><strong>{strTeam}</strong></h5>
+                <br/>
+                <div>
+                <p className="team--information-details-section"><FontAwesomeIcon icon={faMapMarkerAlt} />    <strong>Founded: </strong>{intFormedYear}</p>
+                <p className="team--information-details-section"><FontAwesomeIcon icon={faFlag} />    <strong>Country: </strong>{strCountry}</p>
+                <p className="team--information-details-section"><FontAwesomeIcon icon={faFutbol} />     <strong>Sport Type: </strong>{strSport}</p>
+                <p className="team--information-details-section"><FontAwesomeIcon icon={faMars} />   <strong>Gender: </strong>{strGender}</p>
+                </div>
               </div>
-              <div className="col-md-6">
-                <h3>logo</h3>
+              <div className="col-md-5 d-flex justify-content-center">
+                {strGender === "Male" ? (
+                  <img
+                    className=" img-fluid w-100 my-3 rounded ms-5 d-block "
+                    src={male}
+                    alt=""
+                  />
+                ) : (
+                  <img
+                    className="img-fluid w-100 my-3 rounded mx-auto d-block  "
+                    src={female}
+                    alt=""
+                  />
+                )}
               </div>
             </div>
           </div>
-          <br />
-          <br />
-          <br />
-          <div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam,
-              porro quis! Cum odit maiores voluptate deserunt praesentium alias
-              similique cumque? Non, doloribus quo quod provident ad possimus
-              quasi tempora dolorum distinctio deserunt. Voluptatem architecto
-              doloremque deserunt laborum commodi quibusdam dicta, molestias
-              provident eos iusto. Neque rem eligendi quis distinctio impedit!
-            </p>
-
-            <br />
-            <br />
-
-            <p>{strDescriptionEN}</p>
-          </div>
-          <br />
-          <br />
-          <div className="d-flex justify-content-center">
-            <a
-              target="_"
-              href={`https://${strFacebook}`}
-              className="social-icon facebook"
-            >
-              <FontAwesomeIcon icon={faFacebook} className="facebook" />
-            </a>
-            <a
-              target="_"
-              href={`https://${strTwitter}`}
-              className="social-icon twitter"
-            >
-              <FontAwesomeIcon icon={faTwitter} />
-            </a>
-            <a
-              target="_"
-              href={`https://${strInstagram}`}
-              className="social-icon instagram"
-            >
-              <FontAwesomeIcon icon={faInstagram} />
-            </a>
-            <a
-              target="_"
-              href={`https://${strYoutube}`}
-              className="social-icon youtube"
-            >
-              <FontAwesomeIcon icon={faYoutube} />
-            </a>
-          </div>
+          <br/>
+          <br/>
+          <br/>
+          <p style={{color:"white"}}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam,
+            porro quis! Cum odit maiores voluptate deserunt praesentium alias
+            similique cumque? Non, doloribus quo quod provident ad possimus
+            quasi tempora dolorum distinctio deserunt. Voluptatem architecto
+            doloremque deserunt laborum commodi quibusdam dicta, molestias
+            provident eos iusto. Neque rem eligendi quis distinctio impedit!
+          </p>
+          <br/>
+          <p style={{color:"white"}}>{strDescriptionEN}</p>
+        </div>
+        <div className="d-flex justify-content-center mt-5">
+          <a
+            target="_"
+            href={`https://${strFacebook}`}
+            className="social-icon facebook"
+          >
+            <FontAwesomeIcon icon={faFacebook} className="facebook" />
+          </a>
+          <a
+            target="_"
+            href={`https://${strTwitter}`}
+            className="social-icon twitter"
+          >
+            <FontAwesomeIcon icon={faTwitter} />
+          </a>
+          <a
+            target="_"
+            href={`https://${strInstagram}`}
+            className="social-icon instagram"
+          >
+            <FontAwesomeIcon icon={faInstagram} />
+          </a>
+          <a
+            target="_"
+            href={`https://${strYoutube}`}
+            className="social-icon youtube"
+          >
+            <FontAwesomeIcon icon={faYoutube} />
+          </a>
         </div>
       </div>
     </div>
