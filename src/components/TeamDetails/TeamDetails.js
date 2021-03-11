@@ -51,13 +51,13 @@ const TeamDetails = () => {
           alt=""
         />
       </div>
-      <div style={{backgroundColor:"#700387"}}>
+      <div style={{backgroundColor:"#240e31"}}>
         <div className="container ">
             <br/>
             <br/>
             <br/>
           <div>
-            <div className="row d-flex justify-content-center" style={{ borderRadius: "25px" ,backgroundColor:"#140480"}}>
+            <div className="row d-flex justify-content-center" style={{ borderRadius: "25px" ,backgroundColor:"#034250"}}>
               <div className="col-md-7 ">
                 <h5 className="team--information-details-section mt-3"><strong>{strTeam}</strong></h5>
                 <br/>

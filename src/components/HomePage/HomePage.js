@@ -16,9 +16,9 @@ const HomePage = () => {
   return (
     <div>
       <div className=" banner">
-        <h1 className="text-black text-center bannerTitle">English Premier League</h1>
+        <h1 className="text-center bannerTitle"><span style={{color:"#240e31"}}>English Premier League</span></h1>
       </div>
-      <div style={{backgroundColor:'#00695f'}}>
+      <div style={{backgroundColor:'#240e31'}}>
       <div className="container">
         <div className="row">
           {allTeams.map((team) => (
