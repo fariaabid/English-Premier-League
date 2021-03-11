@@ -26,7 +26,7 @@ const TeamDetails = () => {
     strTwitter,
     strInstagram,
     strYoutube,
-    strStadiumThumb
+    strStadiumThumb,
   } = teamDetails;
   useEffect(() => {
     fetch(
@@ -75,25 +75,41 @@ const TeamDetails = () => {
               doloremque deserunt laborum commodi quibusdam dicta, molestias
               provident eos iusto. Neque rem eligendi quis distinctio impedit!
             </p>
-          </div>
-          <br />
-          <br />
-          <div>
+
+            <br />
+            <br />
+
             <p>{strDescriptionEN}</p>
           </div>
           <br />
           <br />
           <div className="d-flex justify-content-center">
-            <a target="_" href={`https://${strFacebook}`} className="social-icon facebook">
+            <a
+              target="_"
+              href={`https://${strFacebook}`}
+              className="social-icon facebook"
+            >
               <FontAwesomeIcon icon={faFacebook} className="facebook" />
             </a>
-            <a target="_" href={`https://${strTwitter}`} className="social-icon twitter">
+            <a
+              target="_"
+              href={`https://${strTwitter}`}
+              className="social-icon twitter"
+            >
               <FontAwesomeIcon icon={faTwitter} />
             </a>
-            <a target="_" href={`https://${strInstagram}`} className="social-icon instagram">
+            <a
+              target="_"
+              href={`https://${strInstagram}`}
+              className="social-icon instagram"
+            >
               <FontAwesomeIcon icon={faInstagram} />
             </a>
-            <a target="_" href={`https://${strYoutube}`} className="social-icon youtube">
+            <a
+              target="_"
+              href={`https://${strYoutube}`}
+              className="social-icon youtube"
+            >
               <FontAwesomeIcon icon={faYoutube} />
             </a>
           </div>
